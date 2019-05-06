@@ -1,0 +1,19 @@
+{% extends 'firstApp/base.html' %}
+
+{% block main %}
+<form action='../greet/' method='POST'>
+    {% csrf_token %}
+    <label>First Name: </label>
+    <input type='text' name='newfirstname'>
+    <br>
+    <label>Last Name: </label>
+    <input type='text' name='newlastname'>
+    <br>
+    <label>Username: </label>
+    <input type='text' name='newusername'>
+    <br>
+    <label>Password: </label>
+    <input type='password' name='newpassword'>
+    <button type='submit'>Sumbit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'firstApp/base.html'}
+
+<h1>This is my hompage</h1>
+<h1>{{fname}}</h1>
+<a href='/myApp/about/'>Go to about page</a>
+<a href='/myApp/uganda/'>Ugandan Knuckles</a>
+<a href="/myApp/chungus/">Big Chungus</a>
+<ol>
+    <ol>
+        <li>{{thing1}}</li>
+        <li>{{thing2}}</li>
+        <li>{{thing3}}</li>
+        <li>{{thing4}}</li>
+        <li>{{thing5}}</li>
+    </ol>
+</ol>
+<table border='1px'>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Class</th>
+        <th>Quiz 1</th>
+        <th>Quiz 2</th>
+        <th>Quiz 3</th>
+    </tr>
+
+    {% for each in outer_list %}
+<tr>
+    {% for every in each %}
+    <td>{{every}}</td>
+    {% endfor %}
+</tr>
+{% endfor %}
+
+<!-- <tr>
+        <th>Ugandan Knuckles</th>
+        <td>21</td>
+        <td>Knowing da wae</td>
+        <td>0</td>
+        <td>0</td>
+        <td>-1000000</td>
+    </tr>
+
+    <tr>
+        <th>Big Chungus</th>
+        <td>69</td>
+        <td>How 2 B BIGG</td>
+        <td>100</td>
+        <td>Googleplex</td>
+        <td>Aleph null</td>
+    </tr> -->
+</table>
+
+{% if admin %}
+<h1>hello {{username}}</h1>
+{% elif member %}
+<h1>hello {{username}}</h1>
+{% else %}
+<h1>get out</h1>
+{% endif %}

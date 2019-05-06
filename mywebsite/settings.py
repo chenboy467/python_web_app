@@ -25,7 +25,7 @@ SECRET_KEY = 'sw3fm$4n&ux#%$+)j*(=$gcwd!2fmr*^qdiy57@ywi3s&0nz02'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tranquil-anchorage-41075.herokuapp.com']
 
 
 # Application definition
